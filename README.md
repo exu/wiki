@@ -7,8 +7,7 @@ My adventures with IT on many layers.
 ### [JAVA](programming/java/README.md)
 Java related programming knowledge including language, platform and frameworks (i.e Spring).
 
-### [Go](program
-ming/go/README.md)
+### [Go](programming/go/README.md)
 
 Golang programming related knowledge
 
