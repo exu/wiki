@@ -2,7 +2,53 @@ Devops ([back to index](../README.md))
 
 # Kubernetes
 
-## Tools 
+## Naming
+
+### Pods
+
+*“Pods are the smallest deployable units of computing that can be created and managed in Kubernetes.”* say the official Kubernetes docs for pods. While pods can contain one single container, they are not limited to one and can contain as many containers as needed.
+
+What makes these containers a pod, is that **all containers in a pod run as if they would have been running on a single host in pre-container world**. Thus, they share a set of Linux namespaces and do not run isolated from each other. This results in them sharing an IP address and port space, and being able to find each other over localhost or communicate over the IPC namespace. Further, all containers in a pod have access to shared volumes, that is they can mount and work on the same volumes if needed.
+
+In order to gain all this functionality a pod is a single deployable unit. Each single instance of the pod (with all its containers) is always scheduled together.
+
+[source](https://blog.giantswarm.io/understanding-basic-kubernetes-concepts-i-introduction-to-pods-labels-replicas/)
+
+
+### Labels & Selectors
+
+Labels are key/value pairs that can be attached to objects, such as pods, but also any other object in Kubernetes, even nodes. 
+
+Labels can be used to organize and select subsets of objects. They are often used for example to identify releases (beta, stable), environments (dev, prod), or tiers (frontend, backend).
+
+Using label **selectors** a client or user can identify and subsequently manage a group of objects. This is the core grouping primitive of Kubernetes and used in many places. One example of its use is working with replica sets.
+
+
+### Replica Sets (and Replication Controllers)
+
+As mentioned above a pod by itself is ephemeral and won’t be rescheduled if the node it is running on goes down. This is where the **replica set** comes in and ensures that a specific number of pod instances (or replicas) are running at any given time. The replica set then **takes care of (re)scheduling your instances** for you.
+
+There is a higher level concept called a deployment, which manages replica sets. Therefore, you usually won’t need to create or manipulate replica set objects directly.
+
+
+### Deployments
+
+Before deployments, there were replication controllers, which managed pods and ensured a certain number of them were running. Now with deployments we move to replica sets, which are basically the next-generation of replication controllers. Only this time we don’t manage them, but they get managed by the deployments we define. 
+
+Thus, the chain is like following: 
+
+    Deployment -> Replica Set -> Pod(s). 
+    
+And we only have to take care of the first.
+
+
+Additional to what replication controllers (or replica sets) offer, deployments give you **declarative control** over the update strategy used for the deployment. This replaces the old kubectl rolling-update way of updating, but offers the same flexibility in terms of defining `maxSurge` and `maxUnavailable`, i.e. how many additional and how many unavailable pods are allowed. Defining this in a deployment enables you to “spec once use many times”, which helps even more when working in teams or managing a multitude of deployments.
+
+[source](https://blog.giantswarm.io/understanding-basic-kubernetes-concepts-using-deployments-manage-services-declaratively/)
+
+
+
+## Tools
 
 - *Minikube* is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day. https://github.com/kubernetes/minikube
 
@@ -10,6 +56,7 @@ Devops ([back to index](../README.md))
 - *Telepresence* - fast, local development for kubernetes and openshift microservices - proxy for remote kubernetes  - https://www.telepresence.io/
 
 ## Articles
+
 - Development Workflows:                 
     - https://dzone.com/articles/a-development-workflow-for-kubernetes-services
     - https://dev.to/datawireio/fast-development-workflow-with-docker-and-kubernetes-1if
@@ -17,3 +64,6 @@ Devops ([back to index](../README.md))
 
 
 # Docker
+
+## Go and docker 
+- building go based images https://tachingchen.com/blog/building-minimal-docker-image-for-go-applications/ with multistage build example
