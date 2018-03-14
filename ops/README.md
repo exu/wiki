@@ -2,11 +2,23 @@ Devops ([back to index](../README.md))
 
 # Kubernetes
 
+## Community
+
+### Apps SIG
+
+> "Covers deploying and operating applications in Kubernetes. We focus on the developer and devops experience of running applications in Kubernetes. We discuss how to define and run apps in Kubernetes, demo relevant tools and projects, and discuss areas of friction that can lead to suggesting improvements or feature requests."
+
+- [github](https://github.com/kubernetes/community/tree/master/sig-apps)
+- [recordings on YT](https://www.youtube.com/watch?v=hn23Z-vL_cM&list=PL69nYSiGNLP2LMq7vznITnpd2Fk1YIZF3)
+
+
 ## Naming
 
 ### Pods
 
-*“Pods are the smallest deployable units of computing that can be created and managed in Kubernetes.”* say the official Kubernetes docs for pods. While pods can contain one single container, they are not limited to one and can contain as many containers as needed.
+> *“Pods are the smallest deployable units of computing that can be created and managed in Kubernetes.”*
+
+say the official Kubernetes docs for pods. While pods can contain one single container, they are not limited to one and can contain as many containers as needed.
 
 What makes these containers a pod, is that **all containers in a pod run as if they would have been running on a single host in pre-container world**. Thus, they share a set of Linux namespaces and do not run isolated from each other. This results in them sharing an IP address and port space, and being able to find each other over localhost or communicate over the IPC namespace. Further, all containers in a pod have access to shared volumes, that is they can mount and work on the same volumes if needed.
 
@@ -47,6 +59,8 @@ Additional to what replication controllers (or replica sets) offer, deployments 
 Resources:
 * [source](https://blog.giantswarm.io/understanding-basic-kubernetes-concepts-using-deployments-manage-services-declaratively/)
 * [creating deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#use-case)
+
+
 ### Services
 
 Services work by defining a **logical set of pods and a policy by which to access them**. The selection of pods is based on label selectors (which we talked about in the first blog post). In case you select multiple pods, the service automatically takes care of load balancing and assigns them a single (virtual) service IP (which you can also set manually).
@@ -135,6 +149,46 @@ Alternatively, we can edit the Deployment and change `.spec.template.spec.contai
 
     $ kubectl edit deployment/nginx-deployment
     deployment "nginx-deployment" edited
+
+We can run `kubectl get rs` to see that the Deployment updated the Pods by creating a new `ReplicaSet` and scaling it up to 3 replicas, as well as scaling down the old ReplicaSet to 0 replicas.
+
+    $ kubectl get rs
+    NAME                          DESIRED   CURRENT   READY   AGE
+    nginx-deployment-1564180365   3         3         3       6s
+    nginx-deployment-2035384211   0         0         0       36s
+
+#### Rolling back deployments
+
+When something will fuck up (i.e. invalid `nginx 1.91` version deployed previously):
+
+    $ kubectl rollout history deployment/nginx-deployment
+    deployments "nginx-deployment"
+    REVISION    CHANGE-CAUSE
+    1           kubectl create -f docs/user-guide/nginx-deployment.yaml --record
+    2           kubectl set image deployment/nginx-deployment nginx=nginx:1.9.1
+    3           kubectl set image deployment/nginx-deployment nginx=nginx:1.91
+
+We can roll back changes to previous revision:
+
+    $ kubectl rollout undo deployment/nginx-deployment
+    deployment "nginx-deployment" rolled back
+
+Alternatively, you can rollback to a specific revision by specify that in --to-revision:
+
+    $ kubectl rollout undo deployment/nginx-deployment --to-revision=2
+    deployment "nginx-deployment" rolled back
+
+
+#### Scaling deployment
+
+    $ kubectl scale deployment nginx-deployment --replicas=10
+    deployment "nginx-deployment" scaled
+
+
+Assuming [horizontal pod autoscaling](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/) is enabled in your cluster, you can setup an autoscaler for your Deployment and choose the minimum and maximum number of Pods you want to run based on the CPU utilization of your existing Pods.
+
+    $ kubectl autoscale deployment nginx-deployment --min=10 --max=15 --cpu-percent=80
+    deployment "nginx-deployment" autoscaled
 
 
 
