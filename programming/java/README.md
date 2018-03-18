@@ -26,14 +26,14 @@ Interface you probably don't need the Interface.
 When our Java project wants to perform the following operations, it’s better to use Java 8
 
 Stream API to get lot of benefits:
--   When we want perform Database like Operations. For instance, we want perform groupby
-    operation, orderby operation etc.
--   When want to Perform operations Lazily.
--   When we want to write Functional Style programming.
--   When we want to perform Parallel Operations.
--   When want to use Internal Iteration
--   When we want to perform Pipelining operations.
--   When we want to achieve better performance.
+
+- When we want perform Database like Operations. For instance, we want perform groupby operation, orderby operation etc.
+- When want to Perform operations Lazily.
+- When we want to write Functional Style programming.
+- When we want to perform Parallel Operations.
+- When want to use Internal Iteration
+- When we want to perform Pipelining operations.
+- When we want to achieve better performance.
 
 ## Spliterator
 
@@ -115,8 +115,8 @@ It is a bounded collection that is it contains at most one element only. It is a
 alternative to “null” value.
 
 Main Advantage of Optional is:
--   It is used to avoid null checks.
--   It is used to avoid NullPointerException.
+- It is used to avoid null checks.
+- It is used to avoid NullPointerException.
 
 ## Functional interface
 
@@ -133,11 +133,11 @@ Yes, it is possible to define our own Functional Interfaces. We use Java SE 8’
 @FunctionalInterface annotation to mark an interface as Functional Interface.  We need to
 follow these rules to define a Functional Interface:
 
--   Define an interface with one and only one abstract method.
--   We cannot define more than one abstract method.
--   Use @FunctionalInterface annotation in interface definition.
--   We can define any number of other methods like Default methods, Static methods.
--   If we override java.lang.Object class’s method as an abstract method, which does not
+- Define an interface with one and only one abstract method.
+- We cannot define more than one abstract method.
+- Use @FunctionalInterface annotation in interface definition.
+- We can define any number of other methods like Default methods, Static methods.
+- If we override java.lang.Object class’s method as an abstract method, which does not
     count as an abstract method.
 
 ### Is @FunctionalInterface annotation mandatory to define a Functional Interface? What is the use of @FunctionalInterface annotation? Why do we need Functional Interfaces in Java?
@@ -302,7 +302,7 @@ using lambda expressions and stream API.
 
 ## Dependency Injection
 
--   <https://dzone.com/articles/spring-di-patterns-the-good-the-bad-and-the-ugly>
+- <https://dzone.com/articles/spring-di-patterns-the-good-the-bad-and-the-ugly>
 
 ## Type inference
 
