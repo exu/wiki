@@ -1,15 +1,17 @@
 # JAVA programming - [back to index](../../README.md)
 
+GO/PHP/JS developer notes on Java.
+
 ## Naming converntions
 
 ### Interfaces / Class naming
 
+WTF with that all `SomethingImpl` or `ISomething`?
+
 <https://stackoverflow.com/questions/2814805/java-interfaces-implementation-naming-convention>
 
-If all you can come up with to make your Class name unique is suffixing it with Impl, then
-you need to rethink having an Interface at all. So when you have a situation where you
-have an Interface and a single Implementation that is not uniquely specialized from the
-Interface you probably don't need the Interface.
+> If all you can come up with to make your Class name unique is **suffixing it with Impl, then you need to rethink having an Interface at all**. So when you have a situation where you
+have an Interface and a single Implementation that is not uniquely specialized from the Interface you probably don't need the Interface.
 
 ## Stdlib
 
@@ -43,7 +45,6 @@ part Java SE 8.  Like Iterator and ListIterator, It is also one of the Iterator 
 ### Differences between Iterator and Spliterator in Java SE 8?
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
 
 <colgroup>
 <col  class="left" />
@@ -115,6 +116,7 @@ It is a bounded collection that is it contains at most one element only. It is a
 alternative to “null” value.
 
 Main Advantage of Optional is:
+
 - It is used to avoid null checks.
 - It is used to avoid NullPointerException.
 
@@ -267,10 +269,10 @@ like any other methods.
 
 Why do we need Lambda Expression?
 
-1.  Reduced Lines of Code - One of the clear benefit of using lambda expression is that the
+1. Reduced Lines of Code - One of the clear benefit of using lambda expression is that the
     amount of code is reduced, we have already seen that how easily we can create instance
     of a functional interface using lambda expression rather than using anonymous class.
-2.  Sequential and Parallel Execution Support - Another benefit of using lambda expression
+2. Sequential and Parallel Execution Support - Another benefit of using lambda expression
     is that we can benefit from the Stream API sequential and parallel operations support.
 
 To explain this, let’s take a simple example where we need to write a method to test if a
@@ -366,7 +368,7 @@ I can do this:
     if (isBlank(aString)) {
 # WIKI Spring
 
-### Beans - WTF ?
+## Beans - WTF ?
 
 GENERAL:
 
@@ -377,9 +379,9 @@ in a builder tool.”
 
 A JavaBean is just a standard
 
-1.  All properties private (use getters/setters)
-2.  A public no-argument constructor
-3.  Implements Serializable.
+1. All properties private (use getters/setters)
+2. A public no-argument constructor
+3. Implements Serializable.
 
 IN SPRING
 The objects that form the backbone of your application and that are managed by the Spring
@@ -400,6 +402,6 @@ powerful and gives you the flexibility to choose the scope of the objects you cr
 through configuration instead of having to 'bake in' the scope of an object at the Java
 class level. Beans can be defined to be deployed in one of a number of scopes
 
-### Autowired
+## Autowired
 
 <https://stackoverflow.com/questions/19414734/understanding-spring-autowired-usage>
