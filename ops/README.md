@@ -80,7 +80,11 @@ Additionally, services **can abstract away other kinds of backends that are not 
 
 - **Helm** - Package manager for "Kubernetes Applications" https://helm.sh/ "Helm helps you manage Kubernetes applications — Helm Charts helps you define, install, and upgrade even the most complex Kubernetes application. Charts are easy to create, version, share, and publish — so start using Helm and stop the copy-and-paste madness."
 
+- **KubeDB** run production-ready databases on your Kubernetes cluster: https://kubedb.com/
+
 ## Articles
+
+- Cheatsheet https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
 - Development Workflows:
     - https://dzone.com/articles/a-development-workflow-for-kubernetes-services
