@@ -1,6 +1,6 @@
 # Awesome Me and Technology
 
-My adventures with IT on many layers.
+My adventures with IT on many layers ([Resources](RESOURCES.md))
 
 ## Programming
 
