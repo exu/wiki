@@ -17,3 +17,5 @@ There are three key factors that make a stream reactive:
 - Reactive Streams in Java: https://blog.softwaremill.com/how-not-to-use-reactive-streams-in-java-9-7a39ea9c2cb3
 - Reactive operators: http://reactivex.io/documentation/operators.html
 - Reactive streams specification https://github.com/reactive-streams/reactive-streams-jvm
+- Spring erbflux is based on https://projectreactor.io/
+- Reactive SQL database driver  https://r2dbc.io/
