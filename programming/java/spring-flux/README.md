@@ -21,3 +21,5 @@ There are three key factors that make a stream reactive:
 - Reactive SQL database driver  https://r2dbc.io/
 - Testing Webflux https://docs.spring.io/spring/docs/current/spring-framework-reference/testing.html#webtestclient
 - Visualization of example operators https://rxmarbles.com/#defaultIfEmpty
+
+- vertx vs webflux https://blog.rcode3.com/blog/vertx-vs-webflux/
