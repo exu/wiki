@@ -20,3 +20,4 @@ There are three key factors that make a stream reactive:
 - Spring erbflux is based on https://projectreactor.io/
 - Reactive SQL database driver  https://r2dbc.io/
 - Testing Webflux https://docs.spring.io/spring/docs/current/spring-framework-reference/testing.html#webtestclient
+- Visualization of example operators https://rxmarbles.com/#defaultIfEmpty

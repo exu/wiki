@@ -2,6 +2,8 @@
 
 My adventures with IT on many layers ([Resources](RESOURCES.md))
 
+## [Quick tips](quick-tips/README.md)
+
 ## Programming
 
 ### [JAVA](programming/java/README.md)
