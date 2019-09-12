@@ -1,4 +1,4 @@
-# Logs
+# Logs [back to index](/)
 
 ## Structured logs viewers
 

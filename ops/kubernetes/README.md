@@ -1,4 +1,4 @@
-Devops ([back to index](../README.md))
+# Devops ([back to index](/))
 
 # Kubernetes
 

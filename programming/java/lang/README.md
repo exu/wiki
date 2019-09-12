@@ -1,4 +1,4 @@
-# JAVA programming - [back to index](../../README.md)
+# JAVA programming - [back to index](/)
 
 GO/PHP/JS developer notes on Java.
 
