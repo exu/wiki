@@ -1,6 +1,6 @@
 # Awesome Me and Technology
 
-My adventures with IT on many layers ([Resources](RESOURCES.md))
+My adventures with IT on many layers
 
 ## [Quick tips](quick-tips/README.md)
 
@@ -13,6 +13,7 @@ My adventures with IT on many layers ([Resources](RESOURCES.md))
 
 Java related programming knowledge including language, platform and frameworks (i.e Spring).
 
+### [Go Workshops](https://github.com/exu/go-workshops)
 ### [Go](programming/go/README.md)
 
 Golang programming related knowledge
