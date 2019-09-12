@@ -6,7 +6,10 @@ My adventures with IT on many layers ([Resources](RESOURCES.md))
 
 ## Programming
 
-### [JAVA](programming/java/README.md)
+### [JAVA language](programming/java/lang/README.md)
+### [JAVA Junit](programming/java/junit/README.md)
+### [Spring Webflux](programming/java/spring/README.md)
+### [Spring Webflux](programming/java/spring-flux/README.md)
 
 Java related programming knowledge including language, platform and frameworks (i.e Spring).
 
@@ -27,3 +30,5 @@ Development and operations knowledge, recently Kubernetes and related stuff
 ## Project management
 
 `@TODO` migrate from org-mode
+
+## [Performance](performance/README.md)
