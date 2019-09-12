@@ -1,6 +1,6 @@
-# Awesome Me and Technology
+# Awesome Technology
 
-My adventures with IT on many layers
+[My](http://twitter.com/ex00) adventures with IT on many layers
 
 ## Programming
 
@@ -10,7 +10,7 @@ Java related programming knowledge including language, platform and frameworks (
 
 - [JAVA language](programming/java/lang/README.md)
 - [JAVA Junit](programming/java/junit/README.md)
-- [Spring Webflux](programming/java/spring/README.md)
+- [Spring](programming/java/spring/README.md)
 - [Spring Webflux](programming/java/spring-flux/README.md)
 
 ### Go
