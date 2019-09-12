@@ -2,25 +2,30 @@
 
 My adventures with IT on many layers
 
-## [Quick tips](quick-tips/README.md)
-
 ## Programming
 
-### [JAVA language](programming/java/lang/README.md)
-### [JAVA Junit](programming/java/junit/README.md)
-### [Spring Webflux](programming/java/spring/README.md)
-### [Spring Webflux](programming/java/spring-flux/README.md)
+### JAVA
 
 Java related programming knowledge including language, platform and frameworks (i.e Spring).
 
-### [Go Workshops](https://github.com/exu/go-workshops)
-### [Go](programming/go/README.md)
+- [JAVA language](programming/java/lang/README.md)
+- [JAVA Junit](programming/java/junit/README.md)
+- [Spring Webflux](programming/java/spring/README.md)
+- [Spring Webflux](programming/java/spring-flux/README.md)
+
+### Go
 
 Golang programming related knowledge
 
-## [Dev Ops](ops/README.md)
+- [Go Workshops](https://github.com/exu/go-workshops)
+- [Go](programming/go/README.md)
 
-Development and operations knowledge, recently Kubernetes and related stuff
+
+## Cloud / Operations / Dev Ops
+
+- [Kubernetes](ops/kubernetes/README.md)
+- [Charts](ops/charts/README.md)
+
 
 ## Databases
 
@@ -32,4 +37,14 @@ Development and operations knowledge, recently Kubernetes and related stuff
 
 `@TODO` migrate from org-mode
 
-## [Performance](performance/README.md)
+## Performance
+
+- [Performance related articles](performance/README.md)
+
+## Tools and tips
+
+- [Quick tips](quick-tips/README.md)
+
+### Tools
+
+- [Logs](tools/logs/README.md)
