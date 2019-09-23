@@ -12,6 +12,7 @@ Java related programming knowledge including language, platform and frameworks (
 - [JAVA Junit](programming/java/junit/README.md)
 - [Spring](programming/java/spring/README.md)
 - [Spring Webflux](programming/java/spring-flux/README.md)
+- [RSocket](programming/java/rsocket/README.md)
 
 ### Go
 
