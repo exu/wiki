@@ -63,4 +63,4 @@ For example, Mono#concatWith(Publisher) returns a Flux while Mono#then(Mono) ret
 
 ### Workshops / Coding excerctises
 
-- [Head First Reactive With Fspring And Reactor/](https://reactor.github.io/head-first-reactive-with-spring-and-reactor/)
+- [Head First Reactive With Spring And Reactor/](https://reactor.github.io/head-first-reactive-with-spring-and-reactor/)
