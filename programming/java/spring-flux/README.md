@@ -59,7 +59,7 @@ For example, Mono#concatWith(Publisher) returns a Flux while Mono#then(Mono) ret
 - [The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
 - [Java Reactive Programming](https://www.scnsoft.com/blog/java-reactive-programming)
 - [Performance](https://medium.com/@filia.aleks/microservice-performance-battle-spring-mvc-vs-webflux-80d39fd81bf0)
-
+- [Backpressure](https://www.e4developer.com/2018/04/28/springs-webflux-reactor-parallelism-and-backpressure/)
 
 ### Workshops / Coding excerctises
 
