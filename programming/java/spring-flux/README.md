@@ -17,6 +17,7 @@ Reactive programming is an asynchronous programming paradigm concerned with data
 — https://en.wikipedia.org/wiki/Reactive_programming
 An API for asynchronous programming with observable streams
 — http://reactivex.io/
+
 Well I am pretty sure that is not the quick intro you where looking for. I find a simpler, better definition the following :
 In reactive programming, everything can be a stream of data.
 — https://gist.github.com/staltz/868e7e9bc2a7b8c1f754
@@ -60,7 +61,13 @@ For example, Mono#concatWith(Publisher) returns a Flux while Mono#then(Mono) ret
 - [Java Reactive Programming](https://www.scnsoft.com/blog/java-reactive-programming)
 - [Performance](https://medium.com/@filia.aleks/microservice-performance-battle-spring-mvc-vs-webflux-80d39fd81bf0)
 - [Backpressure](https://www.e4developer.com/2018/04/28/springs-webflux-reactor-parallelism-and-backpressure/)
+- [Flux::create vs ::generate](https://stackoverflow.com/questions/49951060/difference-between-flux-create-and-flux-generate)
 
 ### Workshops / Coding excerctises
 
 - [Head First Reactive With Spring And Reactor/](https://reactor.github.io/head-first-reactive-with-spring-and-reactor/)
+
+
+### Tools
+
+- [BlockHound - Blocking calls detector](https://github.com/reactor/BlockHound)
