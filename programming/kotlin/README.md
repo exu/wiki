@@ -4,6 +4,10 @@
 
 ## Internals 
 
+### Types
+
+- [Nullable vs optional](https://typealias.com/guides/java-optionals-and-kotlin-nulls/)
+
 ### Classes 
 
 #### Sealed classes 
