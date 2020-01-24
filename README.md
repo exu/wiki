@@ -14,7 +14,7 @@ Java related programming knowledge including language, platform and frameworks (
 - [Spring](programming/java/spring/README.md)
 - [RSocket](programming/java/rsocket/README.md)
 
-### Kotlin 
+### Kotlin
 - [Kotlin language](programming/kotlin/README.md)
 
 
@@ -54,6 +54,6 @@ Golang programming related knowledge
 
 - [Logs](tools/logs/README.md)
 
-## Editors 
+## Editors
 
-- [Emacs](editors/emacs/README.md) 
+- [Emacs](editors/emacs/README.md)
