@@ -53,3 +53,7 @@ Golang programming related knowledge
 ### Tools
 
 - [Logs](tools/logs/README.md)
+
+## Editors 
+
+- [Emacs](editors/emacs/README.md) 
