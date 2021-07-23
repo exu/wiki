@@ -57,3 +57,6 @@ Golang programming related knowledge
 ## Editors
 
 - [Emacs](editors/emacs/README.md)
+
+
+## [Fun](fun/README.md)
